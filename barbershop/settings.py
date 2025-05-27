@@ -19,16 +19,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # Добавляем разрешенные хосты для нашего домена и IP
-ALLOWED_HOSTS = ['*',]
-#     'koddex-django-consult-412-efc7.twc1.net',  # Основной домен
-#     'www.koddex-django-consult-412-efc7.twc1.net',  # С www
-#     '188.225.46.213',  # Публичный IP
-#     'localhost',  # Для локальной разработки
-#     '127.0.0.1',  # Для локальной разработки
-# ]
+ALLOWED_HOSTS = [
+    'koddex-django-consult-412-efc7.twc1.net',  # Основной домен
+    'www.koddex-django-consult-412-efc7.twc1.net',  # С www
+    '188.225.46.213',  # Публичный IP
+    'localhost',  # Для локальной разработки
+    '127.0.0.1',  # Для локальной разработки
+    '*',  # Разрешаем все хосты (не рекомендуется для продакшена, но может быть полезно для разработки)
+]
 
 # ...existing code...
 
@@ -37,8 +38,8 @@ ALLOWED_HOSTS = ['*',]
 CSRF_TRUSTED_ORIGINS = [
     'https://koddex-django-consult-412-efc7.twc1.net',
     'http://koddex-django-consult-412-efc7.twc1.net',
-    'https://koddex-django-consult-412-efc7.twc1.net',
-    'http://koddex-django-consult-412-efc7.twc1.net',
+    'https://www.koddex-django-consult-412-efc7.twc1.net',
+    'http://www.koddex-django-consult-412-efc7.twc1.net',
 ]
 
 
