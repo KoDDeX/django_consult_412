@@ -22,13 +22,13 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = True
 
 # Добавляем разрешенные хосты для нашего домена и IP
-ALLOWED_HOSTS = [
-    'koddex-django-consult-412-efc7.twc1.net',  # Основной домен
-    'www.koddex-django-consult-412-efc7.twc1.net',  # С www
-    '188.225.46.213',  # Публичный IP
-    'localhost',  # Для локальной разработки
-    '127.0.0.1',  # Для локальной разработки
-]
+ALLOWED_HOSTS = ['*',]
+#     'koddex-django-consult-412-efc7.twc1.net',  # Основной домен
+#     'www.koddex-django-consult-412-efc7.twc1.net',  # С www
+#     '188.225.46.213',  # Публичный IP
+#     'localhost',  # Для локальной разработки
+#     '127.0.0.1',  # Для локальной разработки
+# ]
 
 # ...existing code...
 
